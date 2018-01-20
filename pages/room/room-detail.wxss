@@ -1,0 +1,78 @@
+.room-container {
+    margin: 10rpx 20rpx 0;
+}
+
+.user-container {
+    display: flex;
+    border-radius: 20rpx;
+    background: linear-gradient(#000, 10%, #ddd, 90%, #000);
+}
+
+.user-avater {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+}
+
+.user-avater image {
+    margin: 20rpx;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+
+.user-content {
+    flex: 1;
+}
+
+.user-content .room-id {
+    margin-top: 20rpx;
+    padding-left: 20rpx;
+    line-height: 60rpx;
+    height: 60rpx;
+}
+
+.user-content .user-name {
+    line-height: 60rpx;
+    padding-left: 20rpx;
+    height: 60rpx;
+}
+
+page {
+    background: #000;
+}
+
+.reply-box {
+    border-radius: 10rpx;
+    height: 800rpx;
+    margin-top: 20rpx;
+    padding: 10rpx 0;
+    background: linear-gradient(90deg, #8766d6, 20%, #61cee2, 80%, #6486ef);
+    overflow: scroll;
+}
+
+.reply-box .reply-item {
+    font-family: MicroSoft Yahei;
+    min-height: 60rpx;
+    color: #fff;
+    font-weight: lighter;
+    line-height: 60rpx;
+    font-size: 14px;
+    padding: 0 20rpx;
+    padding-left: 40rpx;
+    animation: 0.2s ease-in show;
+    text-shadow: 2px 2px 2px #0e6a8c;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        font-size: 8px;
+        text-shadow: 1px 1px 1px #000;
+    }
+    to {
+        opacity: 1;
+        font-size: 14px;
+        text-shadow: 2px 2px 2px #0e6a8c;
+    }
+}

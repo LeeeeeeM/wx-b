@@ -1,0 +1,35 @@
+@import "../portal/room-item/room-item.wxss";
+@import "../search/image-box/image-box.wxss";
+
+.area-box {
+    margin: 10rpx 15rpx 0;
+}
+
+.title {
+    padding-left: 20rpx;
+    font-size: 16px;
+    line-height: 24px;
+    height: 24px;
+    font-family: MicroSoft Yahei;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500rpx;
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.list-container .box-border {
+    margin: 10rpx;
+    width: 340rpx;
+}
+
+page {
+    height: 100%;
+    background-color: #000;
+}

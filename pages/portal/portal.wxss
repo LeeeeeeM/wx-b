@@ -1,0 +1,63 @@
+@import "room-item/room-item.wxss";
+@import "../search/image-box/image-box.wxss";
+
+.area-box {
+    margin: 10rpx 15rpx 0;
+}
+
+.title {
+    padding-left: 20rpx;
+    font-size: 16px;
+    line-height: 24px;
+    height: 24px;
+    margin-bottom: 10rpx;
+    font-family: MicroSoft Yahei;
+    color: #fff;
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.list-container .box-border {
+    margin: 10rpx;
+    width: 340rpx;
+}
+
+page {
+    height: 100%;
+    background-color: #000;
+}
+
+.image-container {
+    position: relative;
+}
+.image-container .left-btn {
+    position: absolute;
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    left: 30rpx;
+    bottom: 10rpx;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    font-size: 12px;
+    color: #fff;
+}
+
+.image-container .right-btn {
+    position: absolute;
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    right: 30rpx;
+    bottom: 10rpx;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    font-size: 12px;
+    color: #fff;
+}

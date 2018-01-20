@@ -1,0 +1,40 @@
+<import src="../portal/room-item/room-item.wxml" />
+<import src="image-box/image-box.wxml" />
+
+<view>
+    <block>
+        <view class="image-container">
+            <template is="imageBox"/>
+        </view>
+    </block>
+    <!-- <view class="search-box">
+        <view class="input-box">
+            <input type="text" placeholder="请输入主播相关信息" bindinput="bindKeyInput" value="{{query}}"/>
+        </view>
+        <view class="button-box">
+            <button type="default" plain="plain"  bindtap="searchRoom" hover-class="defaultTap">查询主播</button>
+        </view>
+    </view> -->
+
+    <block>
+        <view class="area-box" wx:if="{{searchList.length > 0}}">
+            <view class="title">搜索结果</view>
+            <view class="list-container">
+                <view catchtap="onRoomTap" data-allData="{{item}}" class="box-border" wx:for="{{searchList}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+                    <template is="roomItem" data="{{...item}}"/>
+                </view>
+            </view>
+        </view>
+    </block>
+
+    <block>
+        <view class="area-box">
+            <view class="title">{{hot.title}}</view>
+            <view class="list-container">
+                <view catchtap="onRoomTap" data-allData="{{item}}" class="box-border" wx:for="{{hot.list}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+                    <template is="roomItem" data="{{...item}}"/>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

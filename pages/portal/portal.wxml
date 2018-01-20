@@ -1,0 +1,30 @@
+<import src="room-item/room-item.wxml" />
+<import src="../search/image-box/image-box.wxml" />
+
+<view>
+    <block>
+        <view class="image-container">
+            <view class="left-btn" bindtap="toSearch">搜索</view>
+            <view class="right-btn" bindtap="toAll">全部</view>
+            <template is="imageBox"/>
+        </view>
+    </block>
+    <block>
+        <view class="area-box">
+            <view class="title">{{hot.title}}</view>
+            <view class="list-container">
+                <view catchtap="onRoomTap" data-allData="{{item}}" class="box-border" wx:for="{{hot.list}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+                    <template is="roomItem" data="{{...item}}"/>
+                </view>
+            </view>
+        </view>
+        <view class="area-box">
+            <view class="title">{{online.title}}</view>
+            <view class="list-container">
+                <view catchtap="onRoomTap" data-allData="{{item}}" class="box-border" wx:for="{{online.list}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+                    <template is="roomItem" data="{{...item}}"/>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

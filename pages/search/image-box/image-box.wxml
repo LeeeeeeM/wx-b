@@ -1,0 +1,5 @@
+<template name="imageBox">
+    <view class="pic-container">
+        <image src="/images/B.jpg" class="b-box"/>
+    </view>
+</template>

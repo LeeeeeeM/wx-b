@@ -1,0 +1,10 @@
+.pic-container {
+    margin: 15rpx 20rpx 0;
+    display: flex;
+}
+
+.pic-container .b-box {
+    border-radius: 20rpx;
+    height: 400rpx;
+    width: 100%;
+}

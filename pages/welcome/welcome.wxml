@@ -1,0 +1,6 @@
+<view class="container">
+    <image class="avatar" src="/images/bm2.jpg" bindtap="avatarTap"/>
+    <view class="journey-container" bindtap="onTap">
+        <text class="journey">开启弹幕之旅</text>
+    </view>
+</view>

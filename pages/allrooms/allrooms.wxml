@@ -1,0 +1,20 @@
+<import src="../portal/room-item/room-item.wxml" />
+<import src="../search/image-box/image-box.wxml" />
+
+<view>
+    <block>
+        <view class="image-container">
+            <template is="imageBox"/>
+        </view>
+    </block>
+    <block>
+        <view class="area-box" wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+            <view class="title">{{item.title}}</view>
+            <view class="list-container">
+                <view catchtap="onRoomTap" data-allData="{{it}}" class="box-border" wx:for="{{item.list}}" wx:for-item="it" wx:for-index="idx" wx:key="idx">
+                    <template is="roomItem" data="{{...it}}"/>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

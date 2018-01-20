@@ -1,0 +1,16 @@
+<view class="room-container">
+    <view class="user-container">
+        <view class="user-avater">
+            <image src="https://api.energys.cn/image/check?url={{detail.user_cover}}" />
+        </view>
+        <view class="user-content">
+            <view class="room-id"><text>房间号: </text><text>{{detail.roomid}}</text></view>
+            <view class="user-name"><text>主播: </text><text>{{detail.uname}}</text></view>
+        </view>
+    </view>
+    <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" class="reply-box" id="replyBox">
+        <view class="reply-item" wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+            {{item.name}}: {{item.text}}
+        </view>
+    </scroll-view>
+</view>

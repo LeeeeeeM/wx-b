@@ -1,0 +1,12 @@
+<template name="roomItem">
+    <view class="flex-item" style="background: {{color}}">
+        <image src="https://api.energys.cn/image/check?url={{user_cover}}" class="avatar" /> 
+        <view class="room-title" wx:if="{{title}}">
+            {{title}}
+        </view>
+        <view wx:elif="{{status}}" class="room-status">
+            {{status}}
+        </view>
+        <text class="user">{{uname}}</text>
+    </view>
+</template>

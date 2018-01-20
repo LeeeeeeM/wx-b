@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/portal/portal",
+    "pages/search/search",
+    "pages/allrooms/allrooms",
+    "pages/room/room-detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "B站弹幕工具"
+  }
+}
