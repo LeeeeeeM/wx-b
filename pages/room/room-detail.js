@@ -16,10 +16,38 @@ Page({
             detail: data
         })
 
+        self.getLastReply(data.roomid)
+
         self.room = new Room(data.roomid)
 
         self.room.then(self.dealReply) 
 
+    },
+
+    getLastReply(roomid) {
+        const self = this
+        wx.request({
+            method: 'post',
+            url: 'https://api.live.bilibili.com/ajax/msg',
+            data: {
+                roomid
+            },
+            header: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            success(res) {
+                const data = res.data.data.room
+                const list = data.map(item => ({
+                    text: item.text,
+                    name: item.nickname
+                }))
+                self.setData({
+                    list
+                })
+            },
+            fail() {
+            }
+        })
     },
 
     dealReply(res) {
